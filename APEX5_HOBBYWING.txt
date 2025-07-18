@@ -1,0 +1,194 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.4.1 Apr 10 2023 / 23:35:08 (e43d591b2) MSP API: 1.45
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name HOBBYWING_XROTORF7CONV
+manufacturer_id HOWI
+mcu_id 0041001e5746501520303431
+signature 
+
+# feature
+feature GPS
+feature OSD
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 1 131073 115200 57600 0 115200
+serial 3 2 115200 57600 0 115200
+
+# beeper
+beeper -RX_LOST
+
+# beacon
+beacon RX_SET
+
+# map
+map TREA1234
+
+# aux
+aux 0 0 1 1475 2100 0 0
+aux 1 1 2 1350 1700 0 0
+aux 2 46 2 1775 2100 0 0
+aux 3 13 5 1300 1700 0 0
+aux 4 35 4 1300 1700 0 0
+aux 5 36 0 1675 2100 0 0
+
+# rxfail
+rxfail 3 s 1500
+rxfail 6 s 1500
+
+# master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_static_hz = 0
+set dyn_notch_count = 1
+set dyn_notch_q = 250
+set dyn_notch_max_hz = 400
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 550
+set acc_calibration = 48,27,125,1
+set baro_hardware = NONE
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set motor_output_reordering = 3,2,1,0,4,5,6,7
+set failsafe_procedure = GPS-RESCUE
+set ibata_scale = 135
+set yaw_motors_reversed = ON
+set 3d_deadband_throttle = 7
+set gps_auto_baud = ON
+set gps_set_home_point_once = ON
+set gps_rescue_min_start_dist = 20
+set gps_rescue_ascend_rate = 500
+set gps_rescue_return_alt = 20
+set gps_rescue_ground_speed = 1000
+set gps_rescue_max_angle = 40
+set gps_rescue_descend_rate = 100
+set gps_rescue_throttle_hover = 1350
+set gps_rescue_allow_arming_without_fix = ON
+set deadband = 4
+set yaw_deadband = 4
+set simplified_gyro_filter_multiplier = 110
+set osd_warn_bitmask = 57343
+set osd_rssi_alarm = 161
+###ERROR IN diff: CORRUPTED CONFIG: osd_rssi_alarm = 161###
+set osd_rssi_dbm_alarm = -95
+set osd_link_quality_pos = 3155
+set osd_link_tx_power_pos = 3091
+set osd_rssi_dbm_pos = 3123
+set osd_throttle_pos = 322
+set osd_vtx_channel_pos = 16482
+set osd_crosshairs_pos = 272
+set osd_ah_sbar_pos = 383
+set osd_mah_drawn_pos = 2657
+set osd_gps_speed_pos = 2748
+set osd_gps_lon_pos = 2080
+set osd_gps_lat_pos = 2112
+set osd_gps_sats_pos = 2048
+set osd_home_dir_pos = 3745
+set osd_home_dist_pos = 3746
+set osd_altitude_pos = 18528
+set osd_warnings_pos = 15003
+set osd_avg_cell_voltage_pos = 2690
+set osd_battery_usage_pos = 16778
+set osd_stat_bitmask = 8390188
+set osd_gps_sats_show_hdop = ON
+set osd_displayport_device = MSP
+set osd_canvas_width = 60
+set osd_canvas_height = 22
+set debug_mode = GYRO_SCALED
+set vcd_video_system = HD
+set gyro_1_sensor_align = CW180
+set gyro_1_align_yaw = 1800
+
+profile 0
+
+# profile 0
+set profile_name = Ilya.fpv
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_dyn_max_hz = 165
+set dterm_lpf1_type = BIQUAD
+set dterm_lpf1_static_hz = 101
+set dterm_lpf2_type = BIQUAD
+set dterm_lpf2_static_hz = 0
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 0
+set p_pitch = 58
+set i_pitch = 105
+set d_pitch = 57
+set f_pitch = 156
+set p_roll = 56
+set i_roll = 100
+set d_roll = 50
+set f_roll = 150
+set p_yaw = 30
+set i_yaw = 60
+set f_yaw = 150
+set d_min_roll = 37
+set d_min_pitch = 42
+set feedforward_jitter_factor = 10
+set dyn_idle_min_rpm = 30
+set simplified_master_multiplier = 125
+set simplified_dterm_filter_multiplier = 135
+
+profile 1
+
+# profile 1
+set profile_name = Steele
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+# rateprofile 1
+set thr_mid = 15
+set thr_expo = 45
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 85
+set pitch_rc_rate = 90
+set yaw_rc_rate = 100
+set roll_expo = 13
+set pitch_expo = 16
+set yaw_expo = 15
+set roll_srate = 65
+set pitch_srate = 65
+set yaw_srate = 65
+
+rateprofile 2
+
+# rateprofile 2
+set thr_mid = 15
+set thr_expo = 55
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 58
+set pitch_rc_rate = 73
+set yaw_rc_rate = 85
+set roll_expo = 13
+set pitch_expo = 16
+set yaw_expo = 15
+set roll_srate = 75
+set pitch_srate = 75
+set yaw_srate = 68
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 2
+
+# save configuration
