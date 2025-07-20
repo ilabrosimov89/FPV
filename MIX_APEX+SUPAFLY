@@ -1,0 +1,221 @@
+set yaw_spin_recovery = AUTO
+
+set dshot_idle_value = 550
+
+set mixer_type = LEGACY
+
+set gyro_cal_on_first_arm = OFF
+
+set pid_at_min_throttle = ON
+set anti_gravity_gain = 80
+set anti_gravity_cutoff_hz = 5
+set anti_gravity_p_gain = 100
+set acc_limit_yaw = 0
+set acc_limit = 0
+
+set iterm_rotation = OFF
+set iterm_relax = RP
+set iterm_relax_type = SETPOINT
+set iterm_relax_cutoff = 15
+set iterm_windup = 85
+set iterm_limit = 400
+set pidsum_limit = 500
+set pidsum_limit_yaw = 400
+
+set throttle_boost = 5
+set throttle_boost_cutoff = 15
+
+set p_pitch = 47
+set i_pitch = 84
+set d_pitch = 46
+set f_pitch = 125
+set p_roll = 45
+set i_roll = 80
+set d_roll = 40
+set f_roll = 120
+set p_yaw = 45
+set i_yaw = 80
+set d_yaw = 0
+set f_yaw = 120
+
+
+
+set angle_p_gain = 50
+set angle_feedforward = 50
+set angle_feedforward_smoothing_ms = 80
+set angle_limit = 60
+set angle_earth_ref = 100
+set horizon_level_strength = 75
+set horizon_limit_sticks = 75
+set horizon_limit_degrees = 135
+set horizon_ignore_sticks = OFF
+set horizon_delay_ms = 500
+set abs_control_gain = 0
+set abs_control_limit = 90
+set abs_control_error_limit = 20
+set abs_control_cutoff = 11
+set use_integrated_yaw = OFF
+set integrated_yaw_relax = 200
+set d_min_roll = 30
+set d_min_pitch = 34
+set d_min_yaw = 0
+set d_max_gain = 37
+set d_max_advance = 20
+
+set thrust_linear = 0
+set transient_throttle_limit = 0
+set feedforward_transition = 0
+
+set feedforward_max_rate_limit = 90
+
+set dyn_idle_min_rpm = 0
+set dyn_idle_p_gain = 50
+set dyn_idle_i_gain = 50
+set dyn_idle_d_gain = 50
+set dyn_idle_max_increase = 150
+set dyn_idle_start_increase = 50
+
+set simplified_master_multiplier = 100
+set simplified_i_gain = 100
+set simplified_d_gain = 100
+set simplified_pi_gain = 100
+set simplified_dmax_gain = 100
+set simplified_feedforward_gain = 100
+set simplified_pitch_d_gain = 100
+set simplified_pitch_pi_gain = 100
+
+set tpa_mode = D
+set tpa_rate = 65
+set tpa_breakpoint = 1350
+set tpa_low_rate = 20
+set tpa_low_breakpoint = 1050
+set tpa_low_always = OFF
+
+set ez_landing_threshold = 25
+set ez_landing_limit = 5
+
+# -- Antigravity --
+
+set anti_gravity_gain = 120
+set feedforward_transition = 30
+
+set simplified_master_multiplier = 115
+set simplified_i_gain = 85
+set simplified_d_gain = 100
+set simplified_pi_gain = 110
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 90
+set simplified_pitch_pi_gain = 115
+
+# ---- Filters Base Setup -------
+
+set gyro_hardware_lpf = NORMAL
+set gyro_lpf1_type = PT1
+set gyro_lpf1_static_hz = 250
+set gyro_lpf2_type = PT1
+set gyro_lpf2_static_hz = 500
+set gyro_notch1_hz = 0
+set gyro_notch1_cutoff = 0
+set gyro_notch2_hz = 0
+set gyro_notch2_cutoff = 0
+
+defaults group_id 554 nosave # PG_DYN_NOTCH_CONFIG
+
+set gyro_lpf1_dyn_min_hz = 250
+set gyro_lpf1_dyn_max_hz = 500
+set gyro_lpf1_dyn_expo = 5
+set gyro_filter_debug_axis = ROLL
+
+set acc_lpf_hz = 25
+
+set dshot_bidir = OFF
+
+set simplified_gyro_filter = ON
+set simplified_gyro_filter_multiplier = 100
+
+defaults group_id 544 nosave # PG_RPM_FILTER_CONFIG
+
+set dterm_lpf1_dyn_min_hz = 75
+set dterm_lpf1_dyn_max_hz = 150
+set dterm_lpf1_dyn_expo = 5
+set dterm_lpf1_type = PT1
+set dterm_lpf1_static_hz = 75
+set dterm_lpf2_type = PT1
+set dterm_lpf2_static_hz = 150
+set dterm_notch_hz = 0
+set dterm_notch_cutoff = 0
+
+set yaw_lowpass_hz = 100
+
+set simplified_dterm_filter = ON
+set simplified_dterm_filter_multiplier = 100
+
+set dshot_bidir = OFF
+set simplified_gyro_filter_multiplier = 160
+set gyro_lpf1_static_hz = 0
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
+set dyn_notch_count = 4
+set dyn_notch_q = 300
+set dyn_notch_min_hz = 90
+set dyn_notch_max_hz = 800
+
+set simplified_dterm_filter_multiplier = 140
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_dyn_max_hz = 0
+set dterm_lpf1_dyn_expo = 0
+
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set rpm_filter_harmonics = 3
+set rpm_filter_q = 1000
+set dyn_notch_count = 2
+set dyn_notch_q = 400
+set rpm_filter_fade_range_hz = 100
+
+# NOTE TO AUTHORS: Always include this Preset in any RC Preset
+
+set feedforward_averaging = OFF
+set feedforward_smooth_factor = 25
+set feedforward_jitter_factor = 7
+set feedforward_transition = 0
+set feedforward_boost = 15
+
+set rc_smoothing = ON
+set rc_smoothing_auto_factor = 30
+set rc_smoothing_auto_factor_throttle = 30
+set rc_smoothing_setpoint_cutoff = 0
+set rc_smoothing_feedforward_cutoff = 0
+set rc_smoothing_throttle_cutoff = 0
+set rc_smoothing_debug_axis = ROLL
+
+feature RX_SERIAL
+set serialrx_provider = CRSF
+
+set feedforward_averaging = OFF
+set feedforward_smooth_factor = 15
+set feedforward_jitter_factor = 10
+set feedforward_boost = 10
+
+set rc_smoothing_auto_factor = 45
+set rc_smoothing_auto_factor_throttle = 45
+
+simplified_tuning apply
+
+
+
+set p_pitch = 58
+set i_pitch = 105
+set d_pitch = 57
+set f_pitch = 156
+set p_roll = 56
+set i_roll = 100
+set d_roll = 50
+set f_roll = 150
+set p_yaw = 30
+set i_yaw = 60
+set f_yaw = 150
+set d_min_roll = 37
+set d_min_pitch = 42
+
+save
