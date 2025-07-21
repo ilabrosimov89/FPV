@@ -238,12 +238,12 @@ feature ANTI_GRAVITY
 
 # serial
 serial 20 1 115200 57600 0 115200
-serial 0 0 115200 57600 0 115200
-serial 1 64 115200 57600 0 115200
+serial 0 131073 115200 57600 0 115200
+serial 1 2 115200 57600 0 115200
 serial 2 0 115200 57600 0 115200
 serial 3 1 115200 57600 0 115200
-serial 4 1024 115200 57600 0 115200
-serial 5 0 115200 57600 0 115200
+serial 4 0 115200 57600 0 115200
+serial 5 64 115200 57600 0 115200
 
 # mixer
 mixer QUADX
@@ -284,7 +284,7 @@ beeper MULTI_BEEPS
 beeper DISARM_REPEAT
 beeper ARMED
 beeper SYSTEM_INIT
-beeper ON_USB
+beeper -ON_USB
 beeper BLACKBOX_ERASE
 beeper CRASH_FLIP
 beeper CAM_CONNECTION_OPEN
@@ -292,18 +292,21 @@ beeper CAM_CONNECTION_CLOSE
 beeper RC_SMOOTHING_INIT_FAIL
 
 # beacon
-beacon -RX_LOST
-beacon -RX_SET
+beacon RX_LOST
+beacon RX_SET
 
 # map
 map AETR1234
 
+# map
+map TREA1234
+
 # aux
-aux 0 0 0 900 900 0 0
-aux 1 0 0 900 900 0 0
-aux 2 0 0 900 900 0 0
-aux 3 0 0 900 900 0 0
-aux 4 0 0 900 900 0 0
+aux 0 0 2 1300 1700 0 0
+aux 1 1 1 1325 1675 0 0
+aux 2 46 1 900 1300 0 0
+aux 3 13 0 1800 2100 0 0
+aux 4 36 3 1700 2100 0 0
 aux 5 0 0 900 900 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
