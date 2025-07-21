@@ -1,7 +1,7 @@
 # rateprofile 1
 set rateprofile_name = noCam
-set thr_mid = 16
-set thr_expo = 60
+set thr_mid = 17
+set thr_expo = 55
 set rates_type = BETAFLIGHT
 set quickrates_rc_expo = OFF
 set roll_rc_rate = 65
