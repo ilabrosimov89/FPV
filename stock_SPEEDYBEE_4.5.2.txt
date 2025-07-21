@@ -296,9 +296,6 @@ beacon RX_LOST
 beacon RX_SET
 
 # map
-map AETR1234
-
-# map
 map TREA1234
 
 # aux
